@@ -4,5 +4,6 @@
 
 
 ## Usage
-Run the utility: 'gendiff first_file second_file'
+Run the utility: `gendiff first_file second_file`
+
 [![asciicast](https://asciinema.org/a/TmP2wcBwo0T05LknbidFfrA8N.svg)](https://asciinema.org/a/TmP2wcBwo0T05LknbidFfrA8N)
