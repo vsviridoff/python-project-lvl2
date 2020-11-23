@@ -13,6 +13,7 @@ gendiff = "gendiff.scripts.gendiff:main"
 [tool.poetry.dependencies]
 python = "^3.8"
 argparse = "^1.4.0"
+pytest = "^6.1.2"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
