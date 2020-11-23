@@ -1,13 +1,21 @@
 install:
 	poetry install
 
+test:
+	poetry run pytest
+
 lint:
 	poetry run flake8 gendiff
 
-build:
+selfchek:
+	poetry check
+
+check: selfchek test lint 
+
+build: check
 	poetry build
 
 packege-install:
 	pip install --user dist/*.whl
 
-.PHONY: install lint build 
+.PHONY: install lint selfchek check build 
