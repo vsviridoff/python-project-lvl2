@@ -46,7 +46,7 @@ def make_string(diff, tab=2):
             strings.append(tab + "- {}: {}".format(key, value))
         if type_of_changing == ADDED:
             strings.append(tab + "+ {}: {}".format(key, value))
-    return '{\n' + '\n'.join(strings) + '\n}'
+    return '{\n' + '\n'.join(strings) + '\n}\n'
 
 
 def create_diff(first_file, second_file):
