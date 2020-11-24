@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
 ![Actions Status](/workflows/hexlet-check/badge.svg)
+![.github/workflows/pyci.yml](https://github.com/vsviridoff/python-project-lvl2/workflows/.github/workflows/pyci.yml/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b3533853bfa325c83319/maintainability)](https://codeclimate.com/github/vsviridoff/python-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b3533853bfa325c83319/test_coverage)](https://codeclimate.com/github/vsviridoff/python-project-lvl2/test_coverage)
 
