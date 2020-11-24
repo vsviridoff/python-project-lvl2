@@ -2,7 +2,7 @@ name: Python CI
 
 on:
   - push
-  - pull-request
+  - pull_request
 
 jobs:
   build:
@@ -24,4 +24,9 @@ jobs:
       - name: Run linter and pytest
         run: |
           make check
-     
+      - name: Ters & publish code coverage
+        uses: paambaati/codeclimate-action@v2.7.4
+        env:
+          CC_TEST_REPORTER_ID: 0c704038f54c5c31f1ae7cb6720bcbc26338e4149cccc7584ed03b7006708c3e
+        with:
+          coverageCommand: poetry run coverage xml
