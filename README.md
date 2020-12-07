@@ -17,7 +17,7 @@ Run the utility: `gendiff first_file second_file`
 
 File formats must be .json or .yaml.
 
-********Examples:**
+**Examples:**
 
 Installation and flat .json and .yaml files comparison
 [![asciicast](https://asciinema.org/a/TmP2wcBwo0T05LknbidFfrA8N.svg)](https://asciinema.org/a/TmP2wcBwo0T05LknbidFfrA8N)
