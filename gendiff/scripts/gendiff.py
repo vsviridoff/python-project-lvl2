@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import argparse
-from gendiff.gendiff import create_diff
+from gendiff.gendiff import generate_diff
 
 parser = argparse.ArgumentParser(description='Generate diff')
 parser.add_argument(
@@ -13,7 +13,7 @@ parser.add_argument('second_file')
 
 def main():
     args = parser.parse_args()
-    diff = create_diff(args.first_file, args.second_file)
+    diff = generate_diff(args.first_file, args.second_file)
     print(diff)
 
 
