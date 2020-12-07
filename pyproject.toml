@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vsviridov_gendiff"
-version = "0.1.2"
+version = "0.2.2"
 description = ""
 authors = ["Vladislav Sviridov <v.sviridov.dev@gmail.com>"]
 packages =[
@@ -16,9 +16,14 @@ argparse = "^1.4.0"
 pytest = "^6.1.2"
 coverage = "^5.3"
 pytest-cov = "^2.10.1"
+PyYAML = "^5.3.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
+
+[[tool.poetry.source]]
+name = "test_pypi"
+url = "https://test.pypi.org/legacy/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
