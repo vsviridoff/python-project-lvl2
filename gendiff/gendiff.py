@@ -1,14 +1,9 @@
-import json
+from gendiff.file_parcer import get_file_data
 
 
 EQUAL, CHANGED, REMOVED, ADDED = (
     'equal', 'changed', 'ramoved', 'added'
 )
-
-
-def get_file_data(file):
-    data = json.load(open(file))
-    return data
 
 
 def compair_files(first_data, second_data):
@@ -49,7 +44,7 @@ def make_string(diff, tab=2):
     return '{\n' + '\n'.join(strings) + '\n}\n'
 
 
-def create_diff(first_file, second_file):
+def generate_diff(first_file, second_file):
     first_data = get_file_data(first_file)
     second_date = get_file_data(second_file)
     unformated_diff = compair_files(first_data, second_date)
