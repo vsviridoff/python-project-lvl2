@@ -7,10 +7,14 @@
 
 ## Installation
 To install the utility use a pip:
-`pip install -i https://test.pypi.org/simple/ vsviridov-gendiff`
+```
+pip install -i https://test.pypi.org/simple/ vsviridov-gendiff`
+```
 
 You might need to install extra packages:
-`python3 -m pip install --index-url https://test.pypi.org/simple --extra-index-url https://test.pypi.org/simple/ vsviridov-gendiff`
+```
+python3 -m pip install --index-url https://test.pypi.org/simple --extra-index-url https://test.pypi.org/simple/ vsviridov-gendiff
+```
 
 ## Usage
 Run the utility: `gendiff first_file second_file`
@@ -22,3 +26,6 @@ File formats must be .json or .yaml.
 Installation and flat .json and .yaml files comparison
 [![asciicast](https://asciinema.org/a/TmP2wcBwo0T05LknbidFfrA8N.svg)](https://asciinema.org/a/TmP2wcBwo0T05LknbidFfrA8N)
 [![asciicast](https://asciinema.org/a/COUBXayLG4O2lUx4qKUWuFNFz.svg)](https://asciinema.org/a/COUBXayLG4O2lUx4qKUWuFNFz)
+
+Nested files comparison with default format
+[![asciicast](https://asciinema.org/a/zrDeFhyWEmav6Q30B9w7ZC6xK.svg)](https://asciinema.org/a/zrDeFhyWEmav6Q30B9w7ZC6xK)
