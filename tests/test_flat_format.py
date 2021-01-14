@@ -5,13 +5,27 @@ ERROR_MASAGE = "Flat diffs are not the same"
 
 
 def test_flat():
-    with open('./tests/fixtures/expexted_flat.txt', 'r') as input_file:
+    with open('./tests/fixtures/expected_flat.txt', 'r') as input_file:
         expected = input_file.read()
+    with open('./tests/fixtures/expected_nested.txt', 'r') as input_file:
+        expected_nested = input_file.read()
     assert expected == gd.generate_diff(
         './tests/fixtures/first_file.json',
-        './tests/fixtures/second_file.json'
+        './tests/fixtures/second_file.json',
+        'stylish'
     ), ERROR_MASAGE
     assert expected == gd.generate_diff(
         './tests/fixtures/first_file.yaml',
-        './tests/fixtures/second_file.yaml'
+        './tests/fixtures/second_file.yaml',
+        'stylish'
+    ), ERROR_MASAGE
+    assert expected_nested == gd.generate_diff(
+        './tests/fixtures/first_nested_file.json',
+        './tests/fixtures/second_nested_file.json',
+        'stylish'
+    ), ERROR_MASAGE
+    assert expected_nested == gd.generate_diff(
+        './tests/fixtures/first_nested_file.yaml',
+        './tests/fixtures/second_nested_file.yaml',
+        'stylish'
     ), ERROR_MASAGE

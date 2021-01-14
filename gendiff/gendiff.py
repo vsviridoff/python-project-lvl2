@@ -1,12 +1,13 @@
 from gendiff.file_parcer import get_file_data
+from gendiff.formatter import get_format
 
 
-EQUAL, CHANGED, REMOVED, ADDED = (
-    'equal', 'changed', 'ramoved', 'added'
+EQUAL, CHANGED, REMOVED, ADDED, NESTED = (
+    'equal', 'changed', 'ramoved', 'added', 'nested'
 )
 
 
-def compair_files(first_data, second_data):
+def build(first_data, second_data):
     diff = {}
     common_keys = first_data.keys() & second_data.keys()
     removed_keys = first_data.keys() - second_data.keys()
@@ -15,7 +16,9 @@ def compair_files(first_data, second_data):
     for key in common_keys:
         value1 = first_data[key]
         value2 = second_data[key]
-        if value1 == value2:
+        if isinstance(value1, dict) and isinstance(value2, dict):
+            new_value = (NESTED, build(value1, value2))
+        elif value1 == value2:
             new_value = (EQUAL, value1)
         else:
             new_value = (CHANGED, (value1, value2))
@@ -27,26 +30,9 @@ def compair_files(first_data, second_data):
     return diff
 
 
-def make_string(diff, tab=2):
-    strings = []
-    tab = ' ' * tab
-    for key, (type_of_changing, value) in sorted(diff.items()):
-        if type_of_changing == EQUAL:
-            strings.append(tab + "  {}: {}".format(key, value))
-        if type_of_changing == CHANGED:
-            old, new = value
-            strings.append(tab + "- {}: {}".format(key, old))
-            strings.append(tab + "+ {}: {}".format(key, new))
-        if type_of_changing == REMOVED:
-            strings.append(tab + "- {}: {}".format(key, value))
-        if type_of_changing == ADDED:
-            strings.append(tab + "+ {}: {}".format(key, value))
-    return '{\n' + '\n'.join(strings) + '\n}\n'
-
-
-def generate_diff(first_file, second_file):
+def generate_diff(first_file, second_file, output_format):
     first_data = get_file_data(first_file)
-    second_date = get_file_data(second_file)
-    unformated_diff = compair_files(first_data, second_date)
-    formated_diff = make_string(unformated_diff)
-    return formated_diff
+    second_data = get_file_data(second_file)
+    unformated_diff = build(first_data, second_data)
+    format_diff = get_format(output_format)
+    return format_diff.formatter(unformated_diff)
