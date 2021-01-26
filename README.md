@@ -29,3 +29,6 @@ Installation and flat .json and .yaml files comparison
 
 Nested files comparison with default format
 [![asciicast](https://asciinema.org/a/zrDeFhyWEmav6Q30B9w7ZC6xK.svg)](https://asciinema.org/a/zrDeFhyWEmav6Q30B9w7ZC6xK)
+
+Plain format
+[![asciicast](https://asciinema.org/a/n7ZdOgU6SRnFpB6jJWqZQmRgy.svg)](https://asciinema.org/a/n7ZdOgU6SRnFpB6jJWqZQmRgy)
