@@ -1,5 +1,5 @@
 from gendiff.file_parcer import get_file_data
-from gendiff.formatter import get_format
+from gendiff.formatter import get_format 
 
 
 EQUAL, CHANGED, REMOVED, ADDED, NESTED = (
