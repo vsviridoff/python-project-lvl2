@@ -8,9 +8,9 @@ def test_plain():
             './tests/fixtures/first_nested_file.json',
             './tests/fixtures/second_nested_file.json',
             'plain'
-        ), 'Flat diffs are not the same'
+        ), 'Plain diffs are not the same'
         assert expected == gd.generate_diff(
             './tests/fixtures/first_nested_file.yaml',
             './tests/fixtures/second_nested_file.yaml',
             'plain'
-        ), 'Flat diffs are not the same' 
+        ), 'Plain diffs are not the same'

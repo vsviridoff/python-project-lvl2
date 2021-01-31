@@ -1,9 +1,6 @@
 import gendiff.gendiff as gd
 
 
-ERROR_MASAGE = "Flat diffs are not the same"
-
-
 def test_flat():
     with open('./tests/fixtures/expected_flat.txt', 'r') as input_file:
         expected = input_file.read()
@@ -13,19 +10,19 @@ def test_flat():
         './tests/fixtures/first_file.json',
         './tests/fixtures/second_file.json',
         'stylish'
-    ), ERROR_MASAGE
+    ), "Flat diffs are not the same"
     assert expected == gd.generate_diff(
         './tests/fixtures/first_file.yaml',
         './tests/fixtures/second_file.yaml',
         'stylish'
-    ), ERROR_MASAGE
+    ), "Flat diffs are not the same"
     assert expected_nested == gd.generate_diff(
         './tests/fixtures/first_nested_file.json',
         './tests/fixtures/second_nested_file.json',
         'stylish'
-    ), ERROR_MASAGE
+    ), "Flat diffs are not the same"
     assert expected_nested == gd.generate_diff(
         './tests/fixtures/first_nested_file.yaml',
         './tests/fixtures/second_nested_file.yaml',
         'stylish'
-    ), ERROR_MASAGE
+    ), "Flat diffs are not the same"
