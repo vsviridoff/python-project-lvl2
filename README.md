@@ -32,3 +32,6 @@ Nested files comparison with default format
 
 Plain format
 [![asciicast](https://asciinema.org/a/n7ZdOgU6SRnFpB6jJWqZQmRgy.svg)](https://asciinema.org/a/n7ZdOgU6SRnFpB6jJWqZQmRgy)
+
+Json format
+https://asciinema.org/a/DU6dnJLYlcBMPEgQvB3nn5bS3
