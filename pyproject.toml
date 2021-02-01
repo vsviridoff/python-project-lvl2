@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "vsviridov_gendiff"
-version = "0.5.0"
+name = "hexlet-code"
+version = "0.5.1"
 description = ""
 authors = ["Vladislav Sviridov <v.sviridov.dev@gmail.com>"]
 packages =[
