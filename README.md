@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/b3533853bfa325c83319/maintainability)](https://codeclimate.com/github/vsviridoff/python-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b3533853bfa325c83319/test_coverage)](https://codeclimate.com/github/vsviridoff/python-project-lvl2/test_coverage)
 ### Hexlet tests and linter status:
-![Actions Status](/workflows/hexlet-check/badge.svg)
+![hexlet-check](https://github.com/vsviridoff/python-project-lvl2/workflows/hexlet-check/badge.svg)
 
 
 ## Installation
