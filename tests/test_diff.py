@@ -21,7 +21,7 @@ arguments = [
 
 def test_generate_diff():
     for items in arguments:
-        file1, file2, expected_file, format = items
+        file1, file2, expected_file, output_format = items
         _, extention = os.path.splitext(expected_file)
 
         with open(expected_file, 'r') as input_file:
@@ -29,9 +29,9 @@ def test_generate_diff():
 
         if extention == '.json':
             assert json.loads(expected) == json.loads(generate_diff(
-                file1, file2, format
+                file1, file2, output_format
             )), error_message
         else:
             assert expected == generate_diff(
-                file1, file2, format
+                file1, file2, output_format
             ), error_message
