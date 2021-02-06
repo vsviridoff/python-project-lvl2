@@ -1,6 +1,6 @@
+import os
 import json
 import yaml
-import os
 
 
 def get_file_data(file):

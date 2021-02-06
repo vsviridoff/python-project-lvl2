@@ -1,4 +1,4 @@
-import gendiff.gendiff as gendiff
+import gendiff.diff_generator as gendiff
 
 
 ADDED_PREFIX, REMOVED_PREFIX, EQUAL_PREFIX = ('+', '-', ' ')

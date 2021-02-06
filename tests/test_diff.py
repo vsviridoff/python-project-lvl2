@@ -1,6 +1,6 @@
 import os
 import json
-from gendiff.gendiff import generate_diff
+from gendiff.diff_generator import generate_diff
 
 
 error_message = 'Diffs are not the same'
