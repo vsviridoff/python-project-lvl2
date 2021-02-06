@@ -1,6 +1,6 @@
 import os
 import json
-import gendiff.gendiff as gd
+from gendiff.gendiff import generate_diff
 
 
 error_message = 'Diffs are not the same'
@@ -28,10 +28,10 @@ def test_generate_diff():
             expected = input_file.read()
 
         if extention == '.json':
-            assert json.loads(expected) == json.loads(gd.generate_diff(
+            assert json.loads(expected) == json.loads(generate_diff(
                 file1, file2, format
             )), error_message
         else:
-            assert expected == gd.generate_diff(
+            assert expected == generate_diff(
                 file1, file2, format
             ), error_message
