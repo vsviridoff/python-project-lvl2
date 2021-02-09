@@ -5,7 +5,7 @@ ADDED_PREFIX, REMOVED_PREFIX, EQUAL_PREFIX = ('+', '-', ' ')
 
 
 def formatter(diff):
-    return format_diff(diff)
+    return format_diff(diff) + "\n"
 
 
 def format_items(value, ident):
