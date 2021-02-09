@@ -27,7 +27,7 @@ def make_string(diff, parent=[]):
         elif type_of_changing == gendiff.CHANGED:
             old, new = value
             strings.append("{}' was updated. From {} to {}".format(
-                    path, format_value(old), format_value(new))
+                path, format_value(old), format_value(new))
             )
 
     return '\n'.join(strings)
