@@ -24,7 +24,7 @@ def test_generate_diff():
         file1, file2, expected_file, output_format = items
         _, extention = os.path.splitext(expected_file)
 
-        with open(expected_file, 'r') as input_file:
+        with open(expected_file) as input_file:
             expected = input_file.read()
 
         if extention == '.json':

@@ -57,4 +57,4 @@ def formatter(diff):
     strings = make_string(diff)
     new_strings = add_prefix(strings)
 
-    return '\n'.join(new_strings)
+    return '\n'.join(new_strings) 
