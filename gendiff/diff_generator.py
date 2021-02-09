@@ -30,7 +30,7 @@ def build(first_data, second_data):
     return diff
 
 
-def generate_diff(first_file, second_file, output_format):
+def generate_diff(first_file, second_file, output_format='stylish'):
     first_data = get_file_data(first_file)
     second_data = get_file_data(second_file)
     unformated_diff = build(first_data, second_data)
