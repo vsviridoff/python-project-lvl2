@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser(description='Generate diff')
 parser.add_argument(
     '-f', '--format',
     default='stylish',
-    help='set format of output',
+    help='set format of output (stylish, json, plain)\ndefault: stylish',
     type=str,
 )
 parser.add_argument('first_file')
