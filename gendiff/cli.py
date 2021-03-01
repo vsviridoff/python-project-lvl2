@@ -7,7 +7,7 @@ def get_parser():
         '-f', '--format',
         default='stylish',
         help='set format of output (stylish, json, plain)\ndefault: stylish',
-        type='str'
+        type=str
     )
     parser.add_argument('first_file')
     parser.add_argument('second_file')
