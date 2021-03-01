@@ -1,4 +1,4 @@
-from gendiff.formats import stylish, plain, json
+from gendiff.format import stylish, plain, json
 
 
 def get_format(output_format):
